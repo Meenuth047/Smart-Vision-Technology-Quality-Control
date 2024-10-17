@@ -44,37 +44,6 @@ How to Run the Project
         
 **Explanation of the Structure**
 
-/flipkart_grid_6.0_smart_vision_project
-│
-├── /camera
-│   ├── capture_image.py          # Code for capturing the image using the webcam
-│
-├── /preprocessing
-│   ├── preprocess_image.py       # Code for preprocessing the captured image (grayscale, normalization, thresholding)
-│
-├── /feature_extraction
-│   ├── extract_text_ocr.py       # Code for extracting text (OCR) from the image using Tesseract
-│   ├── detect_defects.py         # Code for detecting defects in the product using contour and edge detection
-│
-├── /classification
-│   ├── cnn_model.py              # Code to define the CNN model for classification (fresh or defective products)
-│   ├── train_model.py            # Code to train the CNN model using training data
-│   ├── classify_product.py       # Code to classify products based on the trained CNN model
-│
-├── /data
-│   ├── /training_data            # Folder to store training images (organized in subfolders: fresh, expired)
-│   └── /test_images              # Folder to store the test images captured from the camera
-│
-├── /output
-│   ├── defect_detected_image.jpg # Output image after defect detection
-│   ├── preprocessed_image.jpg    # Preprocessed image after grayscale, normalization, etc.
-│   └── product_image.jpg         # Captured image from the camera
-│
-├── main.py                       # Main script to run the entire process (from capture to classification)
-├── requirements.txt              # File containing the list of dependencies (OpenCV, Tesseract, TensorFlow, etc.)
-└── README.md                     # Instructions and details on how to run the project
-
-
   /camera: This folder contains the script to capture images from the camera.
         capture_image.py: This file captures an image using a webcam and saves it to the /output folder as product_image.jpg.
 
